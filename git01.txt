@@ -1,0 +1,232 @@
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1
+$ touch index.html
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1
+$ git init
+Initialized empty Git repository in C:/vs code/Git/Git_1/.git/
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git add index.html
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git commeit -m "initial commit"
+git: 'commeit' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git commit -m "initial commit"
+[master (root-commit) fb1a32b] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ ^C
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git remote add origin https://github.com/Rolex500/Reff-Lap.git
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (master)
+$ git branch -M main
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push -u origin main
+To https://github.com/Rolex500/Reff-Lap.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Rolex500/Reff-Lap.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git pull origin main --rebase
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 206 bytes | 51.00 KiB/s, done.
+From https://github.com/Rolex500/Reff-Lap
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push -f origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Rolex500/Reff-Lap.git
+   6d52c95..b65cebb  main -> main
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git commit -a -m "index"
+[main 7a9839c] index
+ 1 file changed, 11 insertions(+)
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ ^C
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push --set-upstream origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 426 bytes | 426.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Rolex500/Reff-Lap.git
+   b65cebb..7a9839c  main -> main
+branch 'main' set up to track 'origin/main'.
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+Everything up-to-date
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git commit -a -m "index"
+[main b43766b] index
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Rolex500/Reff-Lap.git
+   7a9839c..b43766b  main -> main
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git commit -a -m "index"
+[main 5d16a39] index
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 336 bytes | 336.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Rolex500/Reff-Lap.git
+   b43766b..5d16a39  main -> main
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ ^C
+
+mahes@Rolex MINGW64 /c/vs code/Git/Git_1 (main)
+$ ^C

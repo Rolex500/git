@@ -1,0 +1,21 @@
+1*touch index.html -- Creating New File
+2*git init--All time 
+3*git Status  -- Red pending
+4*git add f(file name - Adding file)--Add one File
+5*git add --a  -- Adding All files
+6*git commit -m "initial commit"- Permonent save
+7* git commit -m "adding files" --Adding All Files
+8*git commit -m "change in f(file name != .txt)" --Changes in file
+9*git commit -a  -m "change in data" --6,5,7 line no command in one line
+->>>$ git commit -a -m "index"
+
+10*git remote add origin <repository-url>
+--we can Acess remotely Every where
+11*git branch -M main--
+12*git push -u origin main --push the data  on git //onse push then -->>[ git push ] command if error occure ->>[ git push --set-upstream origin main ] ->> [git push]
+*13
+
+
+
+
+git add * --Add all file
