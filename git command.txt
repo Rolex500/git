@@ -13,9 +13,26 @@
 --we can Acess remotely Every where
 11*git branch -M main--
 12*git push -u origin main --push the data  on git //onse push then -->>[ git push ] command if error occure ->>[ git push --set-upstream origin main ] ->> [git push]
-*13
+13* git cheackout -f --add & commit !+ remove frome vs code
 
 
 
 
 git add * --Add all file
+
+…or create a new repository on the command line
+echo "# Ref-Lap1" >> README.md
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Rolex500/Ref-Lap1.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/Rolex500/Ref-Lap1.git
+git branch -M main
+git push -u origin main
