@@ -14,6 +14,9 @@
 11*git branch -M main--
 12*git push -u origin main --push the data  on git //onse push then -->>[ git push ] command if error occure ->>[ git push --set-upstream origin main ] ->> [git push]
 13* git cheackout -f --add & commit !+ remove frome vs code
+14*git diff --it can find the changes whose not add+commit
+15*git pull --online download specific file
+16* git mv f1->f2 --rename file
 
 
 
